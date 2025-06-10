@@ -1,0 +1,6 @@
+dotnet tool install --global dotnet-ef
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+conect servidor localhost\SQLEXPRESS
+dotnet ef migrations add InitialData  -o Data\Migrations
+dotnet ef database update  
