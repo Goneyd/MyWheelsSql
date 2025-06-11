@@ -22,4 +22,24 @@ public class MyWhelssDbContext : DbContext
         string conn = config.GetConnectionString("MyConn");
         optionsBuilder.UseSqlServer(conn);
     }
+    
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Produto>()
+            .HasDiscriminator<string>("TipoProduto")
+            .HasValue<Bicicleta>("Bicicleta")
+            .HasValue<Peca>("Peca");
+
+        modelBuilder.Entity<Produto>()
+            .HasOne(p => p.Compra)
+            .WithMany(c => c.Produtos)
+            .HasForeignKey(p => p.CompraId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<Produto>()
+            .HasOne(p => p.Aluguel)
+            .WithMany(a => a.Items)
+            .HasForeignKey(p => p.AluguelId)
+            .OnDelete(DeleteBehavior.Restrict);
+    }
 }
