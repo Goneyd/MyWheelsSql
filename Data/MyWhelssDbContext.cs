@@ -5,14 +5,16 @@ namespace MyWheelsSql.Data;
 
 public class MyWhelssDbContext : DbContext
 {
-    public DbSet<Cliente> Clientes { get; set; }
-    public DbSet<Compra> Compras { get; set; }
-    public DbSet<Aluguel> Aluguels { get; set; } 
-    public DbSet<Produto> Produto { get; set; }    
+   public DbSet<Cliente> Clientes { get; set; }
+   public DbSet<Compra> Compras { get; set; }
+   public DbSet<Aluguel> Aluguels { get; set; } 
+   public DbSet<Produto> Produtos { get; set; }
+    
     
     protected override void OnConfiguring
     (
         DbContextOptionsBuilder optionsBuilder
+        
     )
     {
         var config = new ConfigurationBuilder()
@@ -29,17 +31,6 @@ public class MyWhelssDbContext : DbContext
             .HasDiscriminator<string>("TipoProduto")
             .HasValue<Bicicleta>("Bicicleta")
             .HasValue<Peca>("Peca");
-
-        modelBuilder.Entity<Produto>()
-            .HasOne(p => p.Compra)
-            .WithMany(c => c.Produtos)
-            .HasForeignKey(p => p.CompraId)
-            .OnDelete(DeleteBehavior.Restrict);
-
-        modelBuilder.Entity<Produto>()
-            .HasOne(p => p.Aluguel)
-            .WithMany(a => a.Items)
-            .HasForeignKey(p => p.AluguelId)
-            .OnDelete(DeleteBehavior.Restrict);
     }
+
 }

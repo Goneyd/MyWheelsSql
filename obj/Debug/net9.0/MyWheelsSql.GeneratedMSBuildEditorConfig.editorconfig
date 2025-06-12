@@ -28,24 +28,44 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/RiderProjects/Atpb/MyWheelsSql/Pages/CadastroCliente/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FkYXN0cm9DbGllbnRlXENyZWF0ZS5jc2h0bWw=
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Bicicletas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmljaWNsZXRhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/RiderProjects/Atpb/MyWheelsSql/Pages/CadastroCliente/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FkYXN0cm9DbGllbnRlXERlbGV0ZS5jc2h0bWw=
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Bicicletas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmljaWNsZXRhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/RiderProjects/Atpb/MyWheelsSql/Pages/CadastroCliente/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FkYXN0cm9DbGllbnRlXERldGFpbHMuY3NodG1s
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Bicicletas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmljaWNsZXRhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/RiderProjects/Atpb/MyWheelsSql/Pages/CadastroCliente/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FkYXN0cm9DbGllbnRlXEVkaXQuY3NodG1s
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Bicicletas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmljaWNsZXRhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/RiderProjects/Atpb/MyWheelsSql/Pages/CadastroCliente/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FkYXN0cm9DbGllbnRlXEluZGV4LmNzaHRtbA==
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Bicicletas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmljaWNsZXRhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Clientes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Clientes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Clientes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Clientes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Clientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/RiderProjects/Atpb/MyWheelsSql/Pages/Error.cshtml]
@@ -58,26 +78,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/RiderProjects/Atpb/MyWheelsSql/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Produtos/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Produtos/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Produtos/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Produtos/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Produtos/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/RiderProjects/Atpb/MyWheelsSql/Pages/Shared/_ValidationScriptsPartial.cshtml]

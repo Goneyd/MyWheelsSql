@@ -17,8 +17,41 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Pages\CadastroCliente\" />
-      <Folder Include="Pages\Produtos\" />
+      <_ContentIncludedByDefault Remove="Pages\Produtos\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Produtos\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Produtos\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Produtos\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Produtos\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\CadastroCliente\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\CadastroCliente\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\CadastroCliente\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\CadastroCliente\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\CadastroCliente\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Pages\CadastroCliente\**" />
+      <Compile Remove="Data\Migrations\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Pages\CadastroCliente\**" />
+      <EmbeddedResource Remove="Data\Migrations\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Pages\CadastroCliente\**" />
+      <Content Remove="Data\Migrations\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Pages\CadastroCliente\**" />
+      <None Remove="Data\Migrations\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Pages\Bicicletas\" />
+      <Folder Include="Pages\Clientes\" />
     </ItemGroup>
 
 </Project>
