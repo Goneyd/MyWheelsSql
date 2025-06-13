@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using MyWheelsSql.Data;
 using MyWheelsSql.Models;
 
-namespace MyWheelsSql.Pages.Bicicletas
+namespace MyWheelsSql.Pages.Pecas
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace MyWheelsSql.Pages.Bicicletas
         }
 
         [BindProperty]
-        public Bicicleta Bicicleta { get; set; } = default!;
+        public Produto Produto { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,15 +30,12 @@ namespace MyWheelsSql.Pages.Bicicletas
                 return NotFound();
             }
 
-            var bicicleta = await _context.Produtos
-                .OfType<Bicicleta>()
-                .FirstOrDefaultAsync(m => m.ProdutoId == id);
-
-            if (bicicleta == null)
+            var produto =  await _context.Produtos.FirstOrDefaultAsync(m => m.ProdutoId == id);
+            if (produto == null)
             {
                 return NotFound();
-            } 
-            Bicicleta = bicicleta;
+            }
+            Produto = produto;
            ViewData["AluguelId"] = new SelectList(_context.Aluguels, "AluguelId", "AluguelId");
            ViewData["CompraId"] = new SelectList(_context.Compras, "CompraId", "CompraId");
             return Page();
@@ -50,19 +47,10 @@ namespace MyWheelsSql.Pages.Bicicletas
         {
             if (!ModelState.IsValid)
             {
-                foreach (var entry in ModelState)
-                {
-                    var key = entry.Key;
-                    var errors = entry.Value.Errors;
-                    foreach (var error in errors)
-                    {
-                        Console.WriteLine($"Erro em {key}: {error.ErrorMessage}");
-                    }
-                }
                 return Page();
             }
 
-            _context.Attach(Bicicleta).State = EntityState.Modified;
+            _context.Attach(Produto).State = EntityState.Modified;
 
             try
             {
@@ -70,7 +58,7 @@ namespace MyWheelsSql.Pages.Bicicletas
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProdutoExists(Bicicleta.ProdutoId))
+                if (!ProdutoExists(Produto.ProdutoId))
                 {
                     return NotFound();
                 }
@@ -85,9 +73,7 @@ namespace MyWheelsSql.Pages.Bicicletas
 
         private bool ProdutoExists(int id)
         {
-            return _context.Produtos
-                .OfType<Bicicleta>()
-                .Any(e => e.ProdutoId == id);
+            return _context.Produtos.Any(e => e.ProdutoId == id);
         }
     }
 }

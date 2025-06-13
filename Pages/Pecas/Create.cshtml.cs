@@ -1,11 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using MyWheelsSql.Data;
 using MyWheelsSql.Models;
 
-namespace MyWheelsSql.Pages.Bicicletas
+namespace MyWheelsSql.Pages.Pecas
 {
     public class CreateModel : PageModel
     {
@@ -18,23 +21,23 @@ namespace MyWheelsSql.Pages.Bicicletas
 
         public IActionResult OnGet()
         {
-            ViewData["AluguelId"] = new SelectList(_context.Aluguels, "AluguelId", "AluguelId");
-            ViewData["CompraId"] = new SelectList(_context.Compras, "CompraId", "CompraId");
+        ViewData["AluguelId"] = new SelectList(_context.Aluguels, "AluguelId", "AluguelId");
+        ViewData["CompraId"] = new SelectList(_context.Compras, "CompraId", "CompraId");
             return Page();
         }
 
         [BindProperty]
-        public Bicicleta Bicicleta { get; set; } = default!;
+        public Peca Peca { get; set; } = default!;
 
+        // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
-                
                 return Page();
             }
 
-            _context.Produtos.Add(Bicicleta); 
+            _context.Produtos.Add(Peca);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

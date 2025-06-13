@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using MyWheelsSql.Data;
 using MyWheelsSql.Models;
 
-namespace MyWheelsSql.Pages.Bicicletas
+namespace MyWheelsSql.Pages.Pecas
 {
     public class DetailsModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace MyWheelsSql.Pages.Bicicletas
             _context = context;
         }
 
-        public Bicicleta Bicicleta { get; set; } = default!;
+        public Produto Produto { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,11 +28,11 @@ namespace MyWheelsSql.Pages.Bicicletas
                 return NotFound();
             }
 
-            var bicicleta = await _context.Produtos.OfType<Bicicleta>().FirstOrDefaultAsync(m => m.ProdutoId == id);
+            var produto = await _context.Produtos.FirstOrDefaultAsync(m => m.ProdutoId == id);
 
-            if (bicicleta is not null)
+            if (produto is not null)
             {
-                Bicicleta = bicicleta;
+                Produto = produto;
 
                 return Page();
             }
