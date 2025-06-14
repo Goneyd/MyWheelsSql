@@ -14,36 +14,48 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Produto.ProdutoId" />
+            <input type="hidden" asp-for="Peca.ProdutoId" />
             <div class="form-group">
                 
-                <label asp-for="Produto.Nome" class="control-label"></label>
-                <input asp-for="Produto.Nome" class="form-control" />
-                <span asp-validation-for="Produto.Nome" class="text-danger"></span>
+                <label asp-for="Peca.Nome" class="control-label"></label>
+                <input asp-for="Peca.Nome" class="form-control" />
+                <span asp-validation-for="Peca.Nome" class="text-danger"></span>
             </div>
             <div class="form-group">
                 
-                <label asp-for="Produto.Preco" class="control-label"></label>
-                <input asp-for="Produto.Preco" class="form-control" />
-                <span asp-validation-for="Produto.Preco" class="text-danger"></span>
+                <label asp-for="Peca.Preco" class="control-label"></label>
+                <input asp-for="Peca.Preco" class="form-control" />
+                <span asp-validation-for="Peca.Preco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Peca.Categoria" class="control-label"></label>
+                <input asp-for="Peca.Categoria" class="form-control" />
+                <span asp-validation-for="Peca.Categoria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Peca.Marca" class="control-label"></label>
+                <input asp-for="Peca.Marca" class="form-control" />
+                <span asp-validation-for="Peca.Marca" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
                 
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Produto.Disponivel" /> @Html.DisplayNameFor(model => model.Produto.Disponivel)
+                    <input class="form-check-input" asp-for="Peca.Disponivel" /> @Html.DisplayNameFor(model => model.Peca.Disponivel)
                 </label>
             </div>
             <div class="form-group">
                 
-                <label asp-for="Produto.CompraId" class="control-label"></label>
-                <select asp-for="Produto.CompraId" class="form-control" asp-items="ViewBag.CompraId"></select>
-                <span asp-validation-for="Produto.CompraId" class="text-danger"></span>
+                <label asp-for="Peca.CompraId" class="control-label"></label>
+                <select asp-for="Peca.CompraId" class="form-control" asp-items="ViewBag.CompraId"></select>
+                <span asp-validation-for="Peca.CompraId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 
-                <label asp-for="Produto.AluguelId" class="control-label"></label>
-                <select asp-for="Produto.AluguelId" class="form-control" asp-items="ViewBag.AluguelId"></select>
-                <span asp-validation-for="Produto.AluguelId" class="text-danger"></span>
+                <label asp-for="Peca.AluguelId" class="control-label"></label>
+                <select asp-for="Peca.AluguelId" class="form-control" asp-items="ViewBag.AluguelId"></select>
+                <span asp-validation-for="Peca.AluguelId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

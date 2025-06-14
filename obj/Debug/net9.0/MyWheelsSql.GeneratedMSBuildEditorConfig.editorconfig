@@ -17,81 +17,129 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MyWheelsSql
 build_property.RootNamespace = MyWheelsSql
-build_property.ProjectDir = C:\Users\gabriel.schmidt\RiderProjects\MyWheelsSql\
+build_property.ProjectDir = C:\RiderProjects\Atpb\MyWheelsSql\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\gabriel.schmidt\RiderProjects\MyWheelsSql
+build_property.MSBuildProjectDirectory = C:\RiderProjects\Atpb\MyWheelsSql
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Bicicletas/Create.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Bicicletas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmljaWNsZXRhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Bicicletas/Delete.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Bicicletas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmljaWNsZXRhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Bicicletas/Details.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Bicicletas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmljaWNsZXRhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Bicicletas/Edit.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Bicicletas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmljaWNsZXRhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Bicicletas/Index.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Bicicletas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmljaWNsZXRhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Clientes/Create.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Clientes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Clientes/Delete.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Clientes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Clientes/Details.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Clientes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Clientes/Edit.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Clientes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Clientes/Index.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Clientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Error.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Comprar/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcHJhclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Comprar/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcHJhclxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Comprar/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcHJhclxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Comprar/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcHJhclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Comprar/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcHJhclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Comprar/SelecaoDeProdutos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcHJhclxTZWxlY2FvRGVQcm9kdXRvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Comprar/VereficarCadastro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcHJhclxWZXJlZmljYXJDYWRhc3Ryby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Index.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Privacy.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Pecas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVjYXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Pecas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVjYXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Pecas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVjYXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Pecas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVjYXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Pecas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVjYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/_ViewImports.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/_ViewStart.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gabriel.schmidt/RiderProjects/MyWheelsSql/Pages/Shared/_Layout.cshtml]
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rv2mcc0fkx

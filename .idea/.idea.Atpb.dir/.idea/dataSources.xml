@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@localhost" uuid="afd50ceb-3065-43e8-99ee-2d577ccbc66f">
+    <data-source source="LOCAL" name="MyWheels@localhost" uuid="63424805-5d08-4a45-affc-0e3266bcf39f">
       <driver-ref>sqlserver.jb</driver-ref>
       <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
       <jdbc-driver>com.jetbrains.jdbc.sqlserver.SqlServerDriver</jdbc-driver>
-      <jdbc-url>Server=localhost\SQLEXPRESS</jdbc-url>
+      <jdbc-url>Server=localhost\SQLEXPRESS;Database=MyWheels;Trusted_Connection=True;TrustServerCertificate=true;</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

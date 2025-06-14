@@ -19,7 +19,7 @@ namespace MyWheelsSql.Pages.Pecas
             _context = context;
         }
 
-        public Produto Produto { get; set; } = default!;
+        public Peca Peca { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,11 +28,12 @@ namespace MyWheelsSql.Pages.Pecas
                 return NotFound();
             }
 
-            var produto = await _context.Produtos.FirstOrDefaultAsync(m => m.ProdutoId == id);
+            var peca = await _context.Produtos.OfType<Peca>().
+                FirstOrDefaultAsync(m => m.ProdutoId == id);
 
-            if (produto is not null)
+            if (peca is not null)
             {
-                Produto = produto;
+                Peca = peca;
 
                 return Page();
             }

@@ -1,0 +1,24 @@
+@page
+@model MyWheelsSql.Pages.Comprar.VereficarCadastro
+
+@{
+    Layout = "Shared/_Layout";
+}
+
+<div class="d-flex justify-content-center align-items-start" style="min-height: 80vh; margin-top: 100px;">
+    <form method="post">
+        <div class="form-group text-center">
+            <input type="text" name="Cpf" class="form-control mx-auto"
+                   placeholder="Digite seu CPF" required
+                   style="width: 500px; height: 80px; border-radius: 35px; font-size: 1.5rem; padding: 20px;">
+            <div asp-validation-summary="All" class="text-danger text-center mb-3"></div>
+        </div>
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary"
+                    style="width: 200px; height: 60px; font-size: 1.2rem; border-radius: 35px;">
+                Continuar
+            </button>
+        </div>
+    </form>
+</div>
+

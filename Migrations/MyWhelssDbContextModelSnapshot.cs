@@ -46,7 +46,7 @@ namespace MyWheelsSql.Migrations
 
                     b.HasIndex("ClienteId");
 
-                    b.ToTable("Aluguels", (string)null);
+                    b.ToTable("Aluguels");
                 });
 
             modelBuilder.Entity("MyWheelsSql.Models.Cliente", b =>
@@ -59,11 +59,12 @@ namespace MyWheelsSql.Migrations
 
                     b.Property<string>("Cpf")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Endereco")
                         .IsRequired()
@@ -75,7 +76,13 @@ namespace MyWheelsSql.Migrations
 
                     b.HasKey("ClienteId");
 
-                    b.ToTable("Clientes", (string)null);
+                    b.HasIndex("Cpf")
+                        .IsUnique();
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.ToTable("Clientes");
                 });
 
             modelBuilder.Entity("MyWheelsSql.Models.Compra", b =>
@@ -99,7 +106,7 @@ namespace MyWheelsSql.Migrations
 
                     b.HasIndex("ClienteId");
 
-                    b.ToTable("Compras", (string)null);
+                    b.ToTable("Compras");
                 });
 
             modelBuilder.Entity("MyWheelsSql.Models.Produto", b =>
@@ -137,7 +144,7 @@ namespace MyWheelsSql.Migrations
 
                     b.HasIndex("CompraId");
 
-                    b.ToTable("Produtos", (string)null);
+                    b.ToTable("Produtos");
 
                     b.HasDiscriminator<string>("TipoProduto").HasValue("Produto");
 
@@ -195,11 +202,11 @@ namespace MyWheelsSql.Migrations
             modelBuilder.Entity("MyWheelsSql.Models.Produto", b =>
                 {
                     b.HasOne("MyWheelsSql.Models.Aluguel", "Aluguel")
-                        .WithMany()
+                        .WithMany("Items")
                         .HasForeignKey("AluguelId");
 
                     b.HasOne("MyWheelsSql.Models.Compra", "Compra")
-                        .WithMany()
+                        .WithMany("Produtos")
                         .HasForeignKey("CompraId");
 
                     b.Navigation("Aluguel");
@@ -207,11 +214,21 @@ namespace MyWheelsSql.Migrations
                     b.Navigation("Compra");
                 });
 
+            modelBuilder.Entity("MyWheelsSql.Models.Aluguel", b =>
+                {
+                    b.Navigation("Items");
+                });
+
             modelBuilder.Entity("MyWheelsSql.Models.Cliente", b =>
                 {
                     b.Navigation("Aluguels");
 
                     b.Navigation("Compras");
+                });
+
+            modelBuilder.Entity("MyWheelsSql.Models.Compra", b =>
+                {
+                    b.Navigation("Produtos");
                 });
 #pragma warning restore 612, 618
         }

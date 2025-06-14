@@ -12,9 +12,9 @@ namespace MyWheelsSql.Pages.Pecas
 {
     public class IndexModel : PageModel
     {
-        private readonly MyWheelsSql.Data.MyWhelssDbContext _context;
+        private readonly MyWhelssDbContext _context;
 
-        public IndexModel(MyWheelsSql.Data.MyWhelssDbContext context)
+        public IndexModel(MyWhelssDbContext context)
         {
             _context = context;
         }

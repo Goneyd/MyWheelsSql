@@ -31,6 +31,15 @@ public class MyWhelssDbContext : DbContext
             .HasDiscriminator<string>("TipoProduto")
             .HasValue<Bicicleta>("Bicicleta")
             .HasValue<Peca>("Peca");
+        
+        modelBuilder.Entity<Cliente>()
+            .HasIndex(c => c.Cpf)
+            .IsUnique();
+
+        modelBuilder.Entity<Cliente>()
+            .HasIndex(c => c.Email)
+            .IsUnique();
+
     }
 
 }

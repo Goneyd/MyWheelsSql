@@ -21,7 +21,7 @@ namespace MyWheelsSql.Pages.Pecas
         }
 
         [BindProperty]
-        public Produto Produto { get; set; } = default!;
+        public Peca Peca { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,12 +30,13 @@ namespace MyWheelsSql.Pages.Pecas
                 return NotFound();
             }
 
-            var produto =  await _context.Produtos.FirstOrDefaultAsync(m => m.ProdutoId == id);
-            if (produto == null)
+            var peca =  await _context.Produtos.OfType<Peca>()
+                .FirstOrDefaultAsync(m => m.ProdutoId == id);
+            if (peca == null)
             {
                 return NotFound();
             }
-            Produto = produto;
+            Peca = peca;
            ViewData["AluguelId"] = new SelectList(_context.Aluguels, "AluguelId", "AluguelId");
            ViewData["CompraId"] = new SelectList(_context.Compras, "CompraId", "CompraId");
             return Page();
@@ -50,7 +51,7 @@ namespace MyWheelsSql.Pages.Pecas
                 return Page();
             }
 
-            _context.Attach(Produto).State = EntityState.Modified;
+            _context.Attach(Peca).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +59,7 @@ namespace MyWheelsSql.Pages.Pecas
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ProdutoExists(Produto.ProdutoId))
+                if (!ProdutoExists(Peca.ProdutoId))
                 {
                     return NotFound();
                 }
@@ -73,7 +74,7 @@ namespace MyWheelsSql.Pages.Pecas
 
         private bool ProdutoExists(int id)
         {
-            return _context.Produtos.Any(e => e.ProdutoId == id);
+            return _context.Produtos.OfType<Peca>().Any(e => e.ProdutoId == id);
         }
     }
 }

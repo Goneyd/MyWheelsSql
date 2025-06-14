@@ -730,3 +730,4 @@ C:\Users\gabriel.schmidt\RiderProjects\MyWheelsSql\obj\Debug\net9.0\refint\MyWhe
 C:\Users\gabriel.schmidt\RiderProjects\MyWheelsSql\obj\Debug\net9.0\MyWheelsSql.pdb
 C:\Users\gabriel.schmidt\RiderProjects\MyWheelsSql\obj\Debug\net9.0\MyWheelsSql.genruntimeconfig.cache
 C:\Users\gabriel.schmidt\RiderProjects\MyWheelsSql\obj\Debug\net9.0\ref\MyWheelsSql.dll
+C:\RiderProjects\Atpb\MyWheelsSql\obj\Debug\net9.0\compressed\istgiacuqc-ajf5owbeqo.gz

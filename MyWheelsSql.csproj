@@ -32,8 +32,6 @@
     <ItemGroup>
       <Compile Remove="Pages\CadastroCliente\**" />
       <Compile Remove="Data\Migrations\**" />
-      <Compile Remove="Pages\Pecas\Create.cshtml.cs" />
-      <Compile Remove="Pages\Pecas\Delete.cshtml.cs" />
     </ItemGroup>
 
     <ItemGroup>
@@ -44,8 +42,6 @@
     <ItemGroup>
       <Content Remove="Pages\CadastroCliente\**" />
       <Content Remove="Data\Migrations\**" />
-      <Content Remove="Pages\Pecas\Create.cshtml" />
-      <Content Remove="Pages\Pecas\Delete.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
@@ -56,7 +52,6 @@
     <ItemGroup>
       <Folder Include="Pages\Bicicletas\" />
       <Folder Include="Pages\Clientes\" />
-      <Folder Include="Pages\Pecas\" />
     </ItemGroup>
 
 </Project>
