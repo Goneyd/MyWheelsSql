@@ -28,8 +28,24 @@ namespace MyWheelsSql.Pages.Comprar
             {
                 return NotFound();
             }
-
-            var compra = await _context.Compras.FirstOrDefaultAsync(m => m.CompraId == id);
+            var compra = await (from c in _context.Compras
+                join cl in _context.Clientes on c.ClienteId equals cl.ClienteId
+                join p in _context.Produtos on c.CompraId equals p.CompraId into produtos
+                where c.CompraId == id
+                select new Compra
+                {
+                    CompraId = c.CompraId,
+                    ClienteId = c.ClienteId,
+                    Data = c.Data,
+                    ValorTotal = c.ValorTotal,
+                    Cliente = new Cliente
+                    {
+                        Nome = cl.Nome,
+                        Cpf = cl.Cpf,
+                        Email = cl.Email
+                    },
+                    Produtos = produtos.ToList() 
+                }).FirstOrDefaultAsync();
 
             if (compra is not null)
             {
@@ -48,11 +64,21 @@ namespace MyWheelsSql.Pages.Comprar
                 return NotFound();
             }
 
-            var compra = await _context.Compras.FindAsync(id);
+          
+            var compra = await _context.Compras.Include(c => c.Produtos).FirstOrDefaultAsync(c => c.CompraId == id);
             if (compra != null)
             {
-                Compra = compra;
-                _context.Compras.Remove(Compra);
+       
+                foreach (var produto in compra.Produtos)
+                {
+                    produto.CompraId = null;
+                    produto.Disponivel = true; 
+                }
+
+
+                _context.Compras.Remove(compra);
+
+       
                 await _context.SaveChangesAsync();
             }
 

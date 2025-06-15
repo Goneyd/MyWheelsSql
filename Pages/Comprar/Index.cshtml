@@ -6,11 +6,8 @@
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Compras</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -19,6 +16,15 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Compra[0].ValorTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Compra[0].Cliente.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Compra[0].Cliente.Cpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Compra[0].Cliente.Email)
             </th>
             <th></th>
         </tr>
@@ -33,7 +39,15 @@
                 @Html.DisplayFor(modelItem => item.ValorTotal)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.CompraId">Edit</a> |
+                @Html.DisplayFor(modelItem => item.Cliente.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.Email)
+            </td>
+            <td>
                 <a asp-page="./Details" asp-route-id="@item.CompraId">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.CompraId">Delete</a>
             </td>

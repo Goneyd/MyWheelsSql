@@ -13,5 +13,7 @@ public class Compra
     public decimal ValorTotal { get; set; }
     public ICollection<Produto>? Produtos { get; set; }
     public int ClienteId { get; set; }
+    
+    public Cliente? Cliente { get; set; }
 
 }

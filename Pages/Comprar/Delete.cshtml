@@ -14,17 +14,65 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Compra.Data)
+            Data
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Compra.Data)
         </dd>
+
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Compra.ValorTotal)
+            Valor Total
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Compra.ValorTotal)
         </dd>
+        
+        <div>
+            <h4>Cliente</h4>
+        </div>
+        
+        <dt class="col-sm-2">
+            Nome
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Compra.Cliente.Nome)
+        </dd>
+
+        <dt class="col-sm-2">
+            CPF
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Compra.Cliente.Cpf)
+        </dd>
+        
+        <dt class="col-sm-2">
+            Email
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Compra.Cliente.Email)
+        </dd>
+
+        <div>
+            <h4>Produtos</h4>
+            <hr />
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome Produto</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var produto in Model.Compra.Produtos)
+                    {
+                        <tr>
+                            <td>@produto.Nome</td>
+                            <td>@produto.Preco.ToString("C")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </dl>
     
     <form method="post">

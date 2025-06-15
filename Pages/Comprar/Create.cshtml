@@ -11,28 +11,137 @@
     <h4>Compra</h4>
     <hr />
     <div class="row">
-    <div class="col-md-4">
-    <form method="post">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Compra.Data" class="control-label"></label>
-                <input asp-for="Compra.Data" class="form-control" />
-                <span asp-validation-for="Compra.Data" class="text-danger"></span>
+        <div class="col-md-4">
+            <div>
+                <h4>Cliente</h4>
+                <hr />
+                <dl class="row">
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Cliente.Cpf)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Cliente.Cpf)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Cliente.Nome)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Cliente.Nome)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Cliente.Endereco)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Cliente.Endereco)
+                    </dd>
+                    <dt class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.Cliente.Email)
+                    </dt>
+                    <dd class="col-sm-10">
+                        @Html.DisplayFor(model => model.Cliente.Email)
+                    </dd>
+                </dl>
             </div>
-            <div class="form-group">
-                <label asp-for="Compra.ValorTotal" class="control-label"></label>
-                <input asp-for="Compra.ValorTotal" class="form-control" />
-                <span asp-validation-for="Compra.ValorTotal" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Compra.ClienteId" class="control-label"></label>
-                <select asp-for="Compra.ClienteId" class ="form-control" asp-items="ViewBag.ClienteId"></select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+            
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Bicicletas[0].Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Bicicletas[0].Preco)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Bicicletas[0].Tamanho)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Bicicletas[0].Tipo)
+                    </th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model.Bicicletas) {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Preco)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tamanho)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tipo)
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Pecas[0].Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Pecas[0].Preco)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Pecas[0].Categoria)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Pecas[0].Marca)
+                    </th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model.Pecas) {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Preco)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Categoria)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Marca)
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+            
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Compra.Data" class="control-label"></label>
+                    <input asp-for="Compra.Data" class="form-control"/>
+                    <span asp-validation-for="Compra.Data" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Compra.ValorTotal" class="control-label"></label>
+                    <input asp-for="Compra.ValorTotal" class="form-control"/>
+                    <span asp-validation-for="Compra.ValorTotal" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Compra.ClienteId" class="control-label"></label>
+                    <input asp-for="Compra.ClienteId" class="form-control"/>
+                    <span asp-validation-for="Compra.ClienteId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary"/>
+                </div>
+            </form>
+        </div>
 </div>
 
 <div>

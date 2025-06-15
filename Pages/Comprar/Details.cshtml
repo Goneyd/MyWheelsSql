@@ -2,11 +2,11 @@
 @model MyWheelsSql.Pages.Comprar.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes da Compra";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<h1>Detalhes da Compra</h1>
 
 <div>
     <h4>Compra</h4>
@@ -26,7 +26,61 @@
         </dd>
     </dl>
 </div>
+
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Compra.CompraId">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Compra.Cliente.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Compra.Cliente.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Compra.Cliente.Cpf)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Compra.Cliente.Cpf)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Compra.Cliente.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Compra.Cliente.Email)
+        </dd>
+    </dl>
 </div>
+
+@if (Model.Compra.Produtos.Any())
+{
+    <div>
+        <h4>Produtos</h4>
+        <hr />
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Compra.Produtos.FirstOrDefault().Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Compra.Produtos.FirstOrDefault().Preco)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Compra.Produtos.FirstOrDefault().Disponivel)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var produto in Model.Compra.Produtos)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => produto.Nome)</td>
+                        <td>@Html.DisplayFor(modelItem => produto.Preco)</td>
+                        <td>@Html.DisplayFor(modelItem => produto.Disponivel)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

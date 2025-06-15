@@ -16,8 +16,23 @@ namespace MyWheelsSql.Pages.Comprar
         private readonly MyWheelsSql.Data.MyWhelssDbContext _context;
         
         [BindProperty(SupportsGet = true)]
+        public string bicicletas { get; set; } 
+        [BindProperty(SupportsGet = true)]
+        public string pecas { get; set; }
+
+
+        public IList<Bicicleta> Bicicletas { get; set; } = default!;
+        public IList<Peca> Pecas { get; set; } = default!;
+        
+        public decimal ValorTotal { get; set; }
+        
+        
+        
+        [BindProperty(SupportsGet = true)]
         public string Cpf { get; set; }
         public Cliente Cliente { get; set; } = default!;
+        
+        
         [BindProperty]
         public Compra Compra { get; set; } = default!;
 
@@ -32,7 +47,26 @@ namespace MyWheelsSql.Pages.Comprar
             {
                 var ClienteEncontrado = await _context.Clientes.FirstOrDefaultAsync(x => x.Cpf == Cpf);
                 Cliente = ClienteEncontrado;
+                
+                List<int> bicicletaList = new List<int>(bicicletas.Split(',').Select(x => int.Parse(x)));
+                var BicicletasEncontradas =  await _context.Produtos.OfType<Bicicleta>().Where(b => bicicletaList.Contains(b.ProdutoId)).ToListAsync();
+                Bicicletas = BicicletasEncontradas;
+                
+                List<int> PecaList = new List<int>(pecas.Split(',').Select(x => int.Parse(x)));
+                var PecasEncontradas =  await _context.Produtos.OfType<Peca>().Where(p => PecaList.Contains(p.ProdutoId)).ToListAsync();
+                Pecas = PecasEncontradas;
+                
+                ValorTotal = Bicicletas.Sum(b => b.Preco) + Pecas.Sum(p => p.Preco);
+                
+                
             }
+            Compra = new Compra
+            {
+                Data = DateTime.Now.Date,
+                ClienteId = Cliente.ClienteId,
+                ValorTotal = ValorTotal,
+            };
+
 
             return Page();
         }
@@ -47,8 +81,38 @@ namespace MyWheelsSql.Pages.Comprar
 
             _context.Compras.Add(Compra);
             await _context.SaveChangesAsync();
+            
+            if (!string.IsNullOrEmpty(bicicletas))
+            {
+                List<int> bicicletaIds = bicicletas.Split(',').Select(int.Parse).ToList();
+                var bicicletasParaAtualizar = await _context.Produtos.OfType<Bicicleta>()
+                    .Where(b => bicicletaIds.Contains(b.ProdutoId))
+                    .ToListAsync();
 
-            return RedirectToPage("./Index");
+                foreach (var bicicleta in bicicletasParaAtualizar)
+                {
+                    bicicleta.CompraId = Compra.CompraId; 
+                    bicicleta.Disponivel = false;
+                }
+            }
+            
+            if (!string.IsNullOrEmpty(pecas))
+            {
+                List<int> pecaIds = pecas.Split(',').Select(int.Parse).ToList();
+                var pecasParaAtualizar = await _context.Produtos.OfType<Peca>()
+                    .Where(p => pecaIds.Contains(p.ProdutoId))
+                    .ToListAsync();
+
+                foreach (var peca in pecasParaAtualizar)
+                {
+                    peca.CompraId = Compra.CompraId; 
+                    peca.Disponivel = false; 
+                }
+            }
+
+
+            await _context.SaveChangesAsync();
+            return RedirectToPage("/Pages/Index");
         }
     }
 }

@@ -31,8 +31,10 @@ public class SelecaoDeProdutos : PageModel
     
     public async Task OnGetAsync()
     {
-        var bicicleta = await _context.Produtos.OfType<Bicicleta>().Select(b => new SelectListItem{Value = b.ProdutoId.ToString(), Text = b.Nome}).ToListAsync();
-        var peca = await _context.Produtos.OfType<Peca>().Select(p => new SelectListItem{Value = p.ProdutoId.ToString(), Text = p.Nome}).ToListAsync();
+        var bicicleta = await _context.Produtos.OfType<Bicicleta>().Where(b => b.Disponivel).Select(b => new SelectListItem{Value = b.ProdutoId.ToString(), 
+            Text = $"Nome - {b.Nome}  /  Tipo - {b.Tipo}  /  Tamanho - {b.Tamanho}  /  Preço - {b.Preco}"}).ToListAsync();
+        var peca = await _context.Produtos.OfType<Peca>().Where(p => p.Disponivel).Select(p => new SelectListItem{Value = p.ProdutoId.ToString(),
+            Text = $"Nome - {p.Nome}  /  Categoria - {p.Categoria}  /  Marca - {p.Marca}  /  Preço - {p.Preco}"}).ToListAsync();
         Bicicletas = bicicleta;
         Pecas = peca;
     }

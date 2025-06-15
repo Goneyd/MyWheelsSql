@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyWheelsSql")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db15089f5148d07eef65f6a315dc406586569826")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4273bed330f8a0c94ca3101cc587966726825d27")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyWheelsSql")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyWheelsSql")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
