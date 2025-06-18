@@ -1,0 +1,64 @@
+@page
+@model MyWheelsSql.Pages.Alugar.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Aluguel[0].DataInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aluguel[0].DataFim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aluguel[0].ValorTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aluguel[0].Cliente.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aluguel[0].Cliente.Cpf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aluguel[0].Cliente.Email)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Aluguel) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataFim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.Email)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.AluguelId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.AluguelId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.AluguelId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

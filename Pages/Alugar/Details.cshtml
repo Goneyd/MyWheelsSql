@@ -1,0 +1,92 @@
+@page
+@model MyWheelsSql.Pages.Alugar.DetailsModel
+
+@{
+    ViewData["Title"] = "Detalhes do Aluguel";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Detalhes da Compra</h1>
+
+<div>
+    <h4>Aluguel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluguel.DataInicio)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluguel.DataInicio)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluguel.DataFim)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluguel.DataFim)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluguel.ValorTotal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluguel.ValorTotal)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluguel.Cliente.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluguel.Cliente.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluguel.Cliente.Cpf)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluguel.Cliente.Cpf)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluguel.Cliente.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluguel.Cliente.Email)
+        </dd>
+    </dl>
+</div>
+
+@if (Model.Aluguel.Items.Any())
+{
+    <div>
+        <h4>Items</h4>
+        <hr />
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Aluguel.Items.FirstOrDefault().Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Aluguel.Items.FirstOrDefault().Preco)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Aluguel.Items.FirstOrDefault().Disponivel)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var produto in Model.Aluguel.Items)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => produto.Nome)</td>
+                        <td>@Html.DisplayFor(modelItem => produto.Preco)</td>
+                        <td>@Html.DisplayFor(modelItem => produto.Disponivel)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

@@ -28,6 +28,34 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Alugar/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWx1Z2FyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Alugar/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWx1Z2FyXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Alugar/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWx1Z2FyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Alugar/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWx1Z2FyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Alugar/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWx1Z2FyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Alugar/SelecaoDeProdutos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWx1Z2FyXFNlbGVjYW9EZVByb2R1dG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/RiderProjects/Atpb/MyWheelsSql/Pages/Alugar/VerificarCadastro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWx1Z2FyXFZlcmlmaWNhckNhZGFzdHJvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/RiderProjects/Atpb/MyWheelsSql/Pages/Bicicletas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmljaWNsZXRhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

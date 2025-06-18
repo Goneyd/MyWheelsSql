@@ -52,6 +52,7 @@
     <ItemGroup>
       <Folder Include="Pages\Bicicletas\" />
       <Folder Include="Pages\Clientes\" />
+      <Folder Include="Pages\Consulta\" />
     </ItemGroup>
 
 </Project>

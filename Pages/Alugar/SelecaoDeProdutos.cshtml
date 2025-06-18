@@ -1,0 +1,41 @@
+@page
+@model MyWheelsSql.Pages.Alugar.SelecaoDeProdutos
+
+@{
+    Layout = "Shared/_Layout";
+}
+
+<div class="container mt-5">
+    <h1>Selecione os Produtos</h1>
+    <form method="post">
+        
+        <div class="form-group mt-4">
+            <label for="BicicletasDisponiveis">Bicicletas Disponíveis:</label>
+            <table class="table table-bordered mt-3">
+                <thead>
+                <tr>
+                    <th>Info</th>
+                    <th>Selecionar</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var bicicleta in Model.Bicicletas)
+                {
+                    <tr>
+                        <td>@bicicleta.Text</td>
+                        <td>
+                            <input type="checkbox" name="BicicletasSelecionadas" value="@bicicleta.Value"/>
+                        </td>
+
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+        <input type="hidden" asp-for="Cpf"/>
+
+        <div class="form-group mt-4">
+            <button type="submit" class="btn btn-primary">Confirmar Seleção</button>
+        </div>
+    </form>
+</div>

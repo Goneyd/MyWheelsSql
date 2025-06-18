@@ -14,11 +14,12 @@
     <div class="col-md-4">
     <form method="post">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            
                 <label asp-for="Cliente.Cpf" class="control-label"></label>
                 <input asp-for="Cliente.Cpf" class="form-control" />
                 <span asp-validation-for="Cliente.Cpf" class="text-danger"></span>
-            </div>
+            
+
             <div class="form-group">
                 <label asp-for="Cliente.Nome" class="control-label"></label>
                 <input asp-for="Cliente.Nome" class="form-control" />

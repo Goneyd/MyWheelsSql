@@ -13,4 +13,5 @@ public class Aluguel
     public decimal ValorTotal { get; set; }
     public ICollection<Produto>? Items { get; set; }
     public int ClienteId { get; set; }
+    public Cliente? Cliente { get; set; }
 }
